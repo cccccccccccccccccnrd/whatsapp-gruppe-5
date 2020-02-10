@@ -43,6 +43,8 @@ wss.on('connection', (ws) => {
 })
 
 bot.on('text', (ctx) => {
+  if (ctx.update.message.chat.id !== -369679763) return
+
   const msg = {
     username: ctx.update.message.from.username,
     name: ctx.update.message.from.first_name,
