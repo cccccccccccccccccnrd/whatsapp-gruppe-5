@@ -12,7 +12,7 @@ const app = new Vue({
 
       switch (msg.type) {
         case 'history':
-          this.history = msg.payload
+          this.history = msg.payload.reverse()
           this.$nextTick(function () {
             this.$refs.chat.scrollTop = this.$refs.chat.scrollHeight
           })

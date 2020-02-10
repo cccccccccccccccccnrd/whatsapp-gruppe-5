@@ -49,7 +49,7 @@ bot.on('text', (ctx) => {
     text: ctx.update.message.text,
     date: ctx.update.message.date
   }
-  state.history.push(msg)
+  state.history = [msg, ...state.history.slice(0, 30)]
   history()
 })
 
