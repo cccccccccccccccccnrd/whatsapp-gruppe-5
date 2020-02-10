@@ -4,7 +4,7 @@ const app = new Vue({
     history: []
   },
   mounted: function () {
-    const WS_URL = window.location.hostname === 'localhost' ? 'ws://localhost:4441' : 'wss://cnrd.computer/turing-test-ws/'
+    const WS_URL = window.location.hostname === 'localhost' ? 'ws://localhost:2221' : 'wss://whatsappgruppe5.tech/ws'
     this.socket = new WebSocket(WS_URL)
 
     this.socket.addEventListener('message', (event) => {
@@ -13,6 +13,9 @@ const app = new Vue({
       switch (msg.type) {
         case 'history':
           this.history = msg.payload
+          this.$nextTick(function () {
+            this.$refs.chat.scrollTop = this.$refs.chat.scrollHeight
+          })
           break
         default:
           console.log(msg.payload)

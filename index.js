@@ -12,10 +12,10 @@ const state = {
 const app = express()
 
 app.use(express.static(path.join(__dirname, 'public')))
-app.listen(4440)
-console.log('http://localhost:4440')
+app.listen(2220)
+console.log('http://localhost:2220')
 
-const wss = new WebSocket.Server({ port: 4441 })
+const wss = new WebSocket.Server({ port: 2221 })
 
 function history(ws) {
   const msg = {
