@@ -1,6 +1,5 @@
 import { WebGLRenderer, PerspectiveCamera, Scene, AmbientLight, MeshLambertMaterial, PointLight } from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
 const loader = new GLTFLoader()
 const renderer = new WebGLRenderer()
@@ -17,12 +16,6 @@ window.addEventListener('resize', () => {
 
 const camera = new PerspectiveCamera(2, window.innerWidth / window.innerHeight, 0.1, 1000)
 camera.position.z = 5
-
-const controls = new OrbitControls(camera, renderer.domElement)
-controls.minDistance = 2
-controls.maxDistance = 400
-controls.target.set(0, 0, 0)
-controls.update()
 
 const ambientLight = new AmbientLight('blue', 0.5)
 scene.add(ambientLight)
@@ -47,6 +40,7 @@ function render() {
   requestAnimationFrame(render)
 
   text.rotation.x += 0.05
+  camera.position.z += 0.01
 
   renderer.render(scene, camera)
 }
