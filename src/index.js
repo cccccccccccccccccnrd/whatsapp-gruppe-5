@@ -25,7 +25,6 @@ scene.add(pointLight)
 
 let text
 loader.load('text.glb', (gltf) => {
-  console.log(gltf.scene)
   text = gltf.scene.children[0]
   text.material = new MeshLambertMaterial()
   text.position.z = -10

@@ -6,14 +6,27 @@
   <title>WhatsApp Gruppe 5</title>
 
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-  <div id="top" class="bar">
-    <marquee>WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 </marquee>
-  </div>
-  <div id="bottom" class="bar">
-    <marquee>WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 </marquee>
+  <div class="site">
+    <div class="bar bar-top">
+      <marquee>WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 </marquee>
+    </div>
+    <div id="chat">
+      <div v-for="message in history" class="message">
+        <div class="name-date">
+          <span class="name">{{ message.name }}</span>
+          <span class="date">{{ date(message.date) }}</span>
+        </div>
+        <div class="text">{{ message.text }}</div>
+      </div>
+    </div>
+    <div class="bar bar-bottom">
+      <marquee>WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 WhatsApp Gruppe 5 </marquee>
+    </div>
   </div>
   <script src="bundle.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
