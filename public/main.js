@@ -1,4 +1,5 @@
 drag(document.getElementById('reference'))
+drag(document.getElementById('events'))
 loadReferences()
 
 async function loadReferences() {
@@ -9,8 +10,8 @@ async function loadReferences() {
 }
 
 function drag (element) {
-  element.style.left = `${ Math.floor(Math.random() * Math.floor(element.offsetWidth)) }px`
-  element.style.top = `${ Math.floor(Math.random() * Math.floor(element.offsetHeight)) }px`
+  element.style.left = `${ Math.floor(Math.random() * Math.floor(window.innerWidth - element.offsetWidth)) }px`
+  element.style.top = `${ Math.floor(Math.random() * Math.floor(window.innerHeight - element.offsetHeight)) }px`
 
   let offsetX = 0
   let offsetY = 0
@@ -68,7 +69,8 @@ function dragEnd (event) {
 const app = new Vue({
   el: '#chat',
   data: {
-    history: []
+    history: [],
+    events: ['Treffen 12.2@12:00', 'Ausstellung 12.2@12:00']
   },
   mounted: function () {
     const WS_URL = window.location.hostname === 'localhost' ? 'ws://localhost:2221' : 'wss://whatsappgruppe5.tech/ws'

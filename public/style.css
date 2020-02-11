@@ -94,28 +94,28 @@ canvas {
 
 .window {
   position: absolute;
-  width: 500px;
-  height: 400px;
   background: white;
   border-radius: 7px;
-  box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.2);
+  box-shadow: 0.5em 0.5em 2em rgba(0, 0, 0, 0.1);
   z-index: 100;
   overflow: hidden;
   animation: popup 500ms;
+  filter: invert(100);
 }
 
 .window .frame {
   display: flex;
   align-items: center;
   height: 3.2em;
-  font-size: 0.75em;
+  font-size: 0.85em;
   padding: 0 1em;
   background: white;
   cursor: move;
+  /* border-bottom: 2px solid rgba(0, 0, 0, 0.1); */
 }
 
 .window .frame span {
-  margin: 0 0.3em 0 0;
+  margin: 0 0.25em 0 0;
 }
 
 .window img {
@@ -124,4 +124,24 @@ canvas {
   outline: 0;
   border: 0;
   overflow: hidden;
+}
+
+#reference {
+  width: 500px;
+  height: 400px;
+}
+
+#events {
+  width: 300px;
+  filter: invert(100);
+}
+
+.events {
+  padding: 0 1em;
+}
+
+.event p {
+  font-size: 1em;
+  word-break: break-all;
+  font-family: monospace;
 }
