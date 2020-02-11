@@ -4,7 +4,6 @@ loadReferences(document.getElementById('referencePayload'))
 async function loadReferences(element) {
   const response = await fetch('https://whatsappgruppe5.tech/references')
   const references = await response.json()
-  console.log(references)
   const reference = references[Math.floor(Math.random() * references.length)]
   element.src = reference
 }

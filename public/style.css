@@ -32,6 +32,10 @@ canvas {
   z-index: -1;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .site {
   display: flex;
   flex-flow: column nowrap;
@@ -112,10 +116,6 @@ canvas {
 
 .window .frame span {
   margin: 0 0.3em 0 0;
-}
-
-.window .frame .close {
-  cursor: pointer;
 }
 
 .window img {
