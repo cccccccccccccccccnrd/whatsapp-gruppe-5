@@ -1,11 +1,11 @@
 drag(document.getElementById('reference'))
-loadReferences(document.getElementById('referencePayload'))
+loadReferences()
 
-async function loadReferences(element) {
+async function loadReferences() {
   const response = await fetch('https://whatsappgruppe5.tech/references')
   const references = await response.json()
   const reference = references[Math.floor(Math.random() * references.length)]
-  element.src = reference
+  document.getElementById('referencePayload').src = reference
 }
 
 function drag (element) {
