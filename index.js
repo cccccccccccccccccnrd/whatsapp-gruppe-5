@@ -56,6 +56,8 @@ bot.on('text', (ctx) => {
     if (reference.startsWith('http')) {
       state.references.push(reference)
     }
+
+    return
   }
 
   const msg = {
