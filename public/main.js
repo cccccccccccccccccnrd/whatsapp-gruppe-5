@@ -11,7 +11,7 @@ async function loadReferences() {
 
 function drag (element) {
   element.style.left = `${ Math.floor(Math.random() * Math.floor(window.innerWidth - element.offsetWidth)) }px`
-  element.style.top = `${ Math.floor(Math.random() * Math.floor(window.innerHeight - element.offsetHeight)) }px`
+  element.style.top = `${ Math.floor(Math.random() * Math.floor(window.innerHeight - 500)) }px`
 
   let offsetX = 0
   let offsetY = 0
