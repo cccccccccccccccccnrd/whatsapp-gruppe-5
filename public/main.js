@@ -1,6 +1,18 @@
 drag(document.getElementById('reference'))
-drag(document.getElementById('events'))
+drag(document.getElementById('doc'))
 loadReferences()
+
+document.addEventListener('CABLES.jsLoaded', (event) => {
+  CABLES.patch = new CABLES.Patch({
+      patch: CABLES.exportedPatch,
+      prefixAssetPath: '',
+      glCanvasId: 'glcanvas',
+      glCanvasResizeToWindow: true,
+      onError: (error) => console.log(error),
+      onPatchLoaded: (error) => console.log(error),
+      onFinishedLoading: (error) => console.log(error),
+  })
+})
 
 async function loadReferences() {
   const response = await fetch('https://whatsappgruppe5.tech/references')
