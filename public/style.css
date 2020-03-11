@@ -155,6 +155,14 @@ canvas {
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    font-size: 13px;
+  }
+
+  .bar {
+    font-size: 2.5em;
+  }
+
   #doc {
     width: 200px;
     height: 400px;
