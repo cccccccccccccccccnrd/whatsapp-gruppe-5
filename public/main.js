@@ -1,6 +1,6 @@
-drag(document.getElementById('reference'))
 drag(document.getElementById('doc'))
-loadReferences()
+/* drag(document.getElementById('reference'))
+loadReferences() */
 
 document.addEventListener('CABLES.jsLoaded', (event) => {
   CABLES.patch = new CABLES.Patch({
@@ -8,9 +8,7 @@ document.addEventListener('CABLES.jsLoaded', (event) => {
       prefixAssetPath: '',
       glCanvasId: 'glcanvas',
       glCanvasResizeToWindow: true,
-      onError: (error) => console.log(error),
-      onPatchLoaded: (error) => console.log(error),
-      onFinishedLoading: (error) => console.log(error),
+      onError: (error) => console.log(error)
   })
 })
 
