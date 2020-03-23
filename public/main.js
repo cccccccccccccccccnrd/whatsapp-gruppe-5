@@ -13,7 +13,7 @@ document.addEventListener('CABLES.jsLoaded', (event) => {
 })
 
 async function loadReferences() {
-  const response = await fetch('https://whatsappgruppe5.tech/references')
+  const response = await fetch('https://gruppe5.org/references')
   const references = await response.json()
   const reference = references[Math.floor(Math.random() * references.length)]
   document.getElementById('referencePayload').src = reference
@@ -83,7 +83,7 @@ const app = new Vue({
     events: ['Treffen 12.2@12:00', 'Ausstellung 12.2@12:00']
   },
   mounted: function () {
-    const WS_URL = window.location.hostname === 'localhost' ? 'ws://localhost:2221' : 'wss://whatsappgruppe5.tech/ws'
+    const WS_URL = window.location.hostname === 'localhost' ? 'ws://localhost:2221' : 'wss://gruppe5.org/ws'
     this.socket = new WebSocket(WS_URL)
 
     this.socket.addEventListener('message', (event) => {
