@@ -90,20 +90,21 @@ canvas {
 .bar {
   width: 100%;
   padding: 0.2em 0;
-  font-size: 1.25em;
+  font-size: 2em;
   font-weight: 300;
   text-transform: uppercase;
   color: white;
   background: transparent;
+  transform: rotateX(60deg);
 }
 
-.bar-top {
+/* .bar-top {
   border-bottom: 1px solid white;
 }
 
 .bar-bottom {
   border-top: 1px solid white;
-}
+} */
 
 .window {
   position: absolute;
