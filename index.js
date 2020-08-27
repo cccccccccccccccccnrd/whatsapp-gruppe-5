@@ -97,17 +97,6 @@ bot.on('photo', async (ctx) => {
   }
 })
 
-async function test () {
-  const fileId = 'AgACAgIAAxkBAAIMPF9Hzbnx-cxes8goLOLbTKdso5xnAALPrjEbBFNBSoDuEQivEeCHCGr7lC4AAwEAAwIAA3gAA53nAwABGwQ'
-  const filePath = await getFilePath(fileId)
-
-  if (filePath) {
-    const base = await getBase(filePath)
-    state.residency = base
-    share('residency')
-  }
-}
-
 async function getFilePath (fileId) {
   const response = await fetch(`https://api.telegram.org/bot${process.env.TOKEN}/getFile?file_id=${fileId}`)
   const json = await response.json()
@@ -124,7 +113,5 @@ async function getBase (filePath) {
   const buffer = await response.buffer()
   return Buffer.from(buffer).toString('base64')
 }
-
-test()
 
 bot.launch()
