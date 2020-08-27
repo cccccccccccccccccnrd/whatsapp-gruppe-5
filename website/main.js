@@ -1,4 +1,5 @@
 drag(document.getElementById('doc'))
+drag(document.getElementById('residency'))
 /* drag(document.getElementById('reference'))
 loadReferences() */
 
